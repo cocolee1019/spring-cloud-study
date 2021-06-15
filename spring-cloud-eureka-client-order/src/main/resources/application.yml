@@ -1,0 +1,20 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: EurekaClientOrder10000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      zone-1: http://localhost:8000/eureka/
+    availability-zones:
+      hangzhou: zone-1
+    region: hangzhou
+    metadata-map:
+      zone: zone-1

@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: spring-cloud-eureka-server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    region: hangzhou
+    availability-zones:
+      hangzhou: zone-1
+    service-url:
+      zone-1: http://${eureka.instance.hostname}:${server.port}/eureka/

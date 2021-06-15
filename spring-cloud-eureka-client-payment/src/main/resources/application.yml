@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: EurekaClientPayment9000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    availability-zones:
+      hangzhou: zone-1
+    region: hangzhou
+    metadata-map:
+      zone: zone-1
+    service-url:
+      zone-1: http://localhost:8000/eureka/
+zone.name: zone-1
+debug: true
